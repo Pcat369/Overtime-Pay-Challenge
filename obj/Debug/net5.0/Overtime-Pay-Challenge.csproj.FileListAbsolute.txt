@@ -1,0 +1,16 @@
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.csproj.AssemblyReference.cache
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.AssemblyInfoInputs.cache
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.AssemblyInfo.cs
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.csproj.CoreCompileInputs.cache
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.exe
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.deps.json
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.runtimeconfig.json
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.runtimeconfig.dev.json
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.dll
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\ref\Overtime-Pay-Challenge.dll
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\bin\Debug\net5.0\Overtime-Pay-Challenge.pdb
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.dll
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\ref\Overtime-Pay-Challenge.dll
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.pdb
+C:\Users\phili\Desktop\Learning-to-code\Revature\Overtime-Pay-Challenge\obj\Debug\net5.0\Overtime-Pay-Challenge.genruntimeconfig.cache

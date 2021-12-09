@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Overtime-Pay-Challenge/1.0.0": {
+        "runtime": {
+          "Overtime-Pay-Challenge.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Overtime-Pay-Challenge/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
