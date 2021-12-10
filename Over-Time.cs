@@ -6,45 +6,135 @@ namespace Overtime_Pay_Challenge
     {
         static void Main(string[] args)
         {
+            decimal startDay;
+            decimal endDay;
+            decimal payPerHour;
+            decimal overTime;
+            bool x = true;
 
+            while (x == true)
+            {
+                 try
+                 {
+                    Console.WriteLine("Please enter the start time of your shift in Decimal form using Military units. For example: 1pm = 13.00");
+                    startDay = Convert.ToDecimal(Console.ReadLine());
+
+                    if (startDay > 24 || startDay < 0)
+                    {
+                        Console.WriteLine("The number must be a standard measure of time within the work day. A positive number less than or equal to 24 hours. Please try again.");
+                        break;
+                    }
+                 }
+                 catch (System.Exception)
+                 {
+                     Console.WriteLine("The information you put in was in the invalid format. Please try again.");
+                     break;
+                 }
+                
+
+            Console.WriteLine("");
+
+             try
+                 {
+                    Console.WriteLine("Please enter the end time of your shift in Decimal form using Military units. For example: 2pm = 14.00");
+                    endDay = Convert.ToDecimal(Console.ReadLine());
+                    if (endDay > 24 || endDay < 0)
+                    {
+                        Console.WriteLine("The number must be a standard measure of time. A positive number less than or equal to 24 hours");
+                        break;
+                    }
+
+                 }
+                 catch (System.Exception)
+                 {
+                     
+                     Console.WriteLine("The information you put in was in the invalid format. Please try again.");
+                     break;
+                 }
             
 
-            Console.WriteLine("Please enter the start time of your shift in Decimal form using Military units. For example: 1pm = 13.00");
-            decimal startDay = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("");
-            Console.WriteLine("Please enter the end time of your shift in Decimal form using Military units. For example: 2pm = 14.00");
-            decimal endDay = Convert.ToDecimal(Console.ReadLine());
+
+             try
+                 {
+                    Console.WriteLine("Please enter the amount of money you are paid per hour of work in decimal form: ");
+                    payPerHour = Convert.ToDecimal(Console.ReadLine());
+
+                 }
+                 catch (System.Exception)
+                 {
+                     
+                    Console.WriteLine("The information you put in was in the invalid format. Please try again.");
+                    break;
+                 }
+            
+
+
             Console.WriteLine("");
-            Console.WriteLine("Please enter the amount of money you are paid per hour of work in decimal form: ");
-            decimal payPerHour = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("");
-            Console.WriteLine("Please enter the multiplier for payment in overtime: ");
-            decimal overTime = Convert.ToDecimal(Console.ReadLine());
+
+             try
+                 {
+                    Console.WriteLine("Please enter the multiplier for payment in overtime: ");
+                    overTime = Convert.ToDecimal(Console.ReadLine());
+                 }
+                 catch (System.Exception)
+                 {
+                     
+                    Console.WriteLine("The information you put in was in the invalid format. Please try again.");
+                    break;
+                 }
 
             decimal[] arr = {startDay, endDay, payPerHour, overTime};
 
             DoOvertime(arr);
             
+            x = false;
             
         }
 
+            }
         public static void DoOvertime(decimal[] arr)
         {
             decimal totalPay;
-            decimal totalHours = Math.Abs(arr[0] - arr[1]);
+            decimal workHours = Math.Abs(arr[0] - arr[1]);
+            decimal overTimeHours;
 
-            if(totalHours <= 8)
+            if (arr[0] >= arr[1])
             {
-                totalPay = totalHours * arr[2];
-                totalPay = Math.Round(totalPay, 2);
+                workHours = Math.Abs(workHours - 24);
+            }
+
+            if (arr[0] < 9 && arr[1] >17)
+            {
+                overTimeHours = (Math.Abs(arr[0] - 9)) + (Math.Abs(arr[1] - 17));
+                workHours = workHours - overTimeHours;
+                totalPay = (workHours * arr[2]) + (overTimeHours * arr[2] * arr[3]);
+
                 Console.WriteLine("Total Pay: $" + totalPay);
             }
-            else if(totalHours > 8)
+            else if (arr[1] > 17)
             {
-                totalPay = (totalHours * arr[2]) * arr[3];
-                totalPay = Math.Round(totalPay, 2);
+                overTimeHours = Math.Abs(arr[1] - 17);
+                workHours = workHours - overTimeHours;
+                totalPay = (workHours * arr[2]) + (overTimeHours * arr[2] * arr[3]);
+
                 Console.WriteLine("Total Pay: $" + totalPay);
             }
+            else if (arr[0] < 9)
+            {
+                overTimeHours = Math.Abs(arr[0] - 9);
+                workHours = workHours - overTimeHours;
+                totalPay = (workHours * arr[2]) + (overTimeHours * arr[2] * arr[3]);
+
+                Console.WriteLine("Total Pay: $" + totalPay);
+            }
+            else
+            {
+                totalPay = workHours * arr[2];
+
+                Console.WriteLine("Total Pay: $" + totalPay);
+            }
+
         }
 
 
