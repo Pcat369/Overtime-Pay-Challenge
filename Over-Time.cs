@@ -22,13 +22,13 @@ namespace Overtime_Pay_Challenge
                     if (startDay > 24 || startDay < 0)
                     {
                         Console.WriteLine("The number must be a standard measure of time within the work day. A positive number less than or equal to 24 hours. Please try again.");
-                        break;
+                        continue;
                     }
                  }
                  catch (System.Exception)
                  {
                      Console.WriteLine("The information you put in was in the invalid format. Please try again.");
-                     break;
+                     continue;
                  }
                 
 
@@ -41,7 +41,7 @@ namespace Overtime_Pay_Challenge
                     if (endDay > 24 || endDay < 0)
                     {
                         Console.WriteLine("The number must be a standard measure of time. A positive number less than or equal to 24 hours");
-                        break;
+                        continue;
                     }
 
                  }
@@ -49,7 +49,7 @@ namespace Overtime_Pay_Challenge
                  {
                      
                      Console.WriteLine("The information you put in was in the invalid format. Please try again.");
-                     break;
+                     continue;
                  }
             
 
@@ -65,7 +65,7 @@ namespace Overtime_Pay_Challenge
                  {
                      
                     Console.WriteLine("The information you put in was in the invalid format. Please try again.");
-                    break;
+                    continue;
                  }
             
 
@@ -76,20 +76,18 @@ namespace Overtime_Pay_Challenge
                  {
                     Console.WriteLine("Please enter the multiplier for payment in overtime: ");
                     overTime = Convert.ToDecimal(Console.ReadLine());
+                    x = false;
                  }
                  catch (System.Exception)
                  {
                      
                     Console.WriteLine("The information you put in was in the invalid format. Please try again.");
-                    break;
+                    continue;
                  }
 
             decimal[] arr = {startDay, endDay, payPerHour, overTime};
 
             DoOvertime(arr);
-            
-            x = false;
-            
         }
 
             }
